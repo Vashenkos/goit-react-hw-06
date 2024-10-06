@@ -21,7 +21,7 @@ function Contact({ contact }) {
       </div>
 
       <button className={s.buttonlist}
-        onClick={() =>dispatch(deleteContact(contact.id)}
+        onClick={() =>dispatch(deleteContact(contact.id)
       >
         Delete
       </button>
