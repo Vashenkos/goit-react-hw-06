@@ -13,6 +13,7 @@ const ContactSchema = Yup.object().shape({
   number: Yup.string()
     .min(3, "Занадто мало знаків!")
     .max(50, "Перестарався!")
+    .required("Заповни Обов`язково"), 
 });
 
 const initialValues = {
@@ -21,6 +22,9 @@ const initialValues = {
 };
 function ContactForm() {
   const dispatch = useDispatch();
+
+  const nameFieldId = nanoid(); 
+  const numberFieldId = nanoid(); 
 
   const handleSubmit = (values, actions) => {
     const newContact = { id: nanoid(), ...values };
