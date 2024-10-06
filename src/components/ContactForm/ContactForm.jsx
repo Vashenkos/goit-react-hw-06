@@ -19,13 +19,12 @@ const initialValues = {
   name: "",
   number: "",
 };
-
-function ContactForm({ onAddContact }) {
-  const nameFieldId = nanoid();
-  const numberFieldId = nanoid();
+function ContactForm() {
+  const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
-    onAddContact({ id: nanoid(), ...values });
+    const newContact = { id: nanoid(), ...values };
+    dispatch(addContact(newContact));
     actions.resetForm();
   };
 
