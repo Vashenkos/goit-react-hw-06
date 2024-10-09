@@ -1,7 +1,7 @@
 import Contact from "../Contact/Contact";  
 import { useSelector } from "react-redux";  
-import { selectContacts } from "./../redux/contactsSlice";  
-import { selectNameFilter } from "./../redux/filtersSlice";  
+import { selectContacts } from "../../redux/contactsSlice";  
+import { selectNameFilter } from "../../redux/filtersSlice";  
 import s from "./ContactList.module.css";  
 
 function ContactList({ onDeleteContact }) {  
